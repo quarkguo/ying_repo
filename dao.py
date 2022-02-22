@@ -7,8 +7,8 @@ import pymysql
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String,DateTime,BigInteger,Float
 import mplfinance as mpf
 
-def initDBContext():
-    _cnx = create_engine('mysql+pymysql://quark:Quark618$@localhost/marketdata')   
+def initDBContext(user:pwd):
+    _cnx = create_engine('mysql+pymysql://user:pwd@localhost/marketdata')   
     _meta = MetaData(_cnx)
     return _cnx,_meta
 
